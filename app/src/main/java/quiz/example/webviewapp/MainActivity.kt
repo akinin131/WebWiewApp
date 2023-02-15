@@ -10,6 +10,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import quiz.example.webviewapp.stub.News
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,7 +30,6 @@ class MainActivity : AppCompatActivity() {
         webView.settings.javaScriptEnabled = true
 
 
-
         // Get shared preferences
         sharedPreferences = getSharedPreferences("mySharedPreferences", Context.MODE_PRIVATE)
         editor = sharedPreferences.edit()
@@ -39,41 +39,47 @@ class MainActivity : AppCompatActivity() {
         if (link != null) {
             webView.loadUrl(link)
         } else {
+            // Получение экземпляра FirebaseRemoteConfig для доступа к параметрам удаленной конфигурации.
             firebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
             try {
-                // Load the link from Firebase Remote Config and save it in shared preferences
+                // // Извлекает и активирует конфигурацию из Firebase Remote Config
                 firebaseRemoteConfig.fetchAndActivate().addOnCompleteListener(this) { task ->
+                    // Проверка, была ли задача выполнена успешно
                     if (task.isSuccessful) {
+                        // Получить URL-адрес из удаленной конфигурации
                         val url = firebaseRemoteConfig.getString("myLink")
+                        // Проверка, не является ли URL пустым
                         if (url.isNotEmpty()) {
+                            // Загрузка URL-адрес в WebView
                             webView.loadUrl(url)
+                            // Сохранение URL-адрес в SharedPreferences
                             editor.putString("myLink", url)
                             editor.apply()
+
                         }else{
+                            // Открыть заглушку если firebase возвращает пустое значение
                             val intent = Intent(this, News::class.java)
                             startActivity(intent)
                             finish()
                         }
                     } else {
-                        // Handle error
+
                         val error = task.exception
-                        // Show error screen
-                        // For example:
+
                         setContentView(R.layout.activity_error)
                         val errorTextView = findViewById<TextView>(R.id.errorTextView)
                         errorTextView.text = error.toString()
                     }
                 }
             } catch (e: Exception) {
-                // Handle error
-                // Show error screen
-                // For example:
+                // Показать экран ошибки
                 setContentView(R.layout.activity_error)
                 val errorTextView = findViewById<TextView>(R.id.errorTextView)
                 errorTextView.text = e.toString()
             }
         }
     }
+
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)

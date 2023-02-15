@@ -1,13 +1,16 @@
 package quiz.example.webviewapp.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import quiz.example.webviewapp.R
+
 
 class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     private val newsItems = mutableListOf <NewsItem>()
@@ -16,6 +19,20 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
         val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
         val subtitleTextView: TextView = itemView.findViewById(R.id.subtitleTextView)
         val imageView: ImageView = itemView.findViewById(R.id.imageView)
+        var link = "grtgrgregre"
+
+        init {
+            itemView.setOnClickListener {
+                val bundle = Bundle()
+                bundle.putString("Link",link)
+                println(link)
+                println("ЭТО ЛИИИИИИНК!!!!!!!!!!!!")
+
+                itemView.findNavController().navigate(R.id.action_firstFragment_to_secondFragment,bundle)
+
+
+            }
+        }
 
         fun bind(newsItem: NewsItem){
             titleTextView.text=newsItem.title
@@ -23,6 +40,7 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
             Glide.with(itemView.context)
                 .load(newsItem.imageUrl)
                 .into(imageView)
+            link=newsItem.DetailsUrl
         }
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
@@ -50,3 +68,5 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
     }
 
 }
+
+
