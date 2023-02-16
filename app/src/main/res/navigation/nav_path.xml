@@ -3,24 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_path"
-    app:startDestination="@id/firstFragment">
+    app:startDestination="@id/blankFragment2">
 
     <fragment
-        android:id="@+id/firstFragment"
-        android:name="quiz.example.webviewapp.stub.FirstFragment"
-        android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+        android:id="@+id/blankFragment2"
+        android:name="quiz.example.webviewapp.stub.ListNewsFragment"
+        android:label="fragment_blank2"
+        tools:layout="@layout/fragment_blank2" >
         <action
-            android:id="@+id/action_firstFragment_to_secondFragment"
-            app:destination="@id/secondFragment" />
+            android:id="@+id/action_blankFragment2_to_detailFragment"
+            app:destination="@id/detailsFragment" />
     </fragment>
     <fragment
-        android:id="@+id/secondFragment"
-        android:name="quiz.example.webviewapp.stub.SecondFragment"
-        android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
+        android:id="@+id/detailsFragment"
+        android:name="quiz.example.webviewapp.stub.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
         <action
-            android:id="@+id/action_secondFragment_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            android:id="@+id/action_detailsFragment_to_blankFragment2"
+            app:destination="@id/blankFragment2" />
+
     </fragment>
 </navigation>

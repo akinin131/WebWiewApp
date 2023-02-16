@@ -1,72 +1,88 @@
 package quiz.example.webviewapp.adapter
 
+
+import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.Toast
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import quiz.example.webviewapp.APPQ
 import quiz.example.webviewapp.R
+import quiz.example.webviewapp.databinding.ItemBinding
+import quiz.example.webviewapp.stub.DetailsFragment.MyClass.Companion.EXTRA_URL
+import java.util.*
+import android.content.res.Resources
+import quiz.example.webviewapp.R.*
 
 
-class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
-    private val newsItems = mutableListOf <NewsItem>()
+class NoteAdapter : RecyclerView.Adapter<NoteAdapter.NoteViewHolder>() {
 
-    class NewsViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val titleTextView: TextView = itemView.findViewById(R.id.titleTextView)
-        val subtitleTextView: TextView = itemView.findViewById(R.id.subtitleTextView)
-        val imageView: ImageView = itemView.findViewById(R.id.imageView)
-        var link = "grtgrgregre"
+    var ListNote = Collections.emptyList<NewsItem>()
+
+
+    class NoteViewHolder (view:View):RecyclerView.ViewHolder(view){
+        private val binding = ItemBinding.bind(view)
 
         init {
-            itemView.setOnClickListener {
+            view.setOnClickListener{
                 val bundle = Bundle()
-                bundle.putString("Link",link)
-                println(link)
-                println("ЭТО ЛИИИИИИНК!!!!!!!!!!!!")
+                bundle.putString("Link","link")
 
-                itemView.findNavController().navigate(R.id.action_firstFragment_to_secondFragment,bundle)
+                itemView.findNavController().navigate(id.action_blankFragment2_to_detailFragment)
+                val extraURL = itemView.getContext().getString(R.string.new_one_title);
 
-
+                EXTRA_URL= extraURL
             }
         }
 
-        fun bind(newsItem: NewsItem){
-            titleTextView.text=newsItem.title
-            subtitleTextView.text=newsItem.subtitle
-            Glide.with(itemView.context)
-                .load(newsItem.imageUrl)
-                .into(imageView)
-            link=newsItem.DetailsUrl
+        fun bind(note: NewsItem, position: Int) {
+            binding.apply{
+                binding.textTitle.text = note.title.toString()
+                binding.textRandom.text = note.subtitle
+                binding.aImage.setImageResource(note.imageUrl)
+            }
         }
     }
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
-        return NewsViewHolder(view)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NoteViewHolder {
+        val view = LayoutInflater.from(parent.context).inflate(layout.item, parent,false)
+        return NoteViewHolder(view)
+
+
     }
-    override fun onBindViewHolder(holder: NewsViewHolder, position: Int) {
 
-        holder.bind(newsItems[position])
+    override fun onBindViewHolder(holder: NoteViewHolder, position: Int) {
+        holder.bind(ListNote [position], position)
+        println(position)
 
-       /* val item = newsItems[position]
-        holder.titleTextView.text = item.title
-        holder.subtitleTextView.text = item.subtitle
-       */
     }
 
     override fun getItemCount(): Int {
-        return newsItems.size
+        return ListNote.size
     }
 
-    fun setNewsList(list: List<NewsItem>) {
-        newsItems.clear()
-        newsItems.addAll(list)
+    @SuppressLint("NotifyDataSetChanged")
+    fun setList(list: List<NewsItem>) {
+        ListNote = list
         notifyDataSetChanged()
     }
 
+  fun onViewAttachedToWindow(holder: NoteViewHolder, position: Int) {
+
+        super.onViewAttachedToWindow(holder)
+        holder.bind(ListNote [position], position)
+        holder.itemView.setOnClickListener {
+            //StartFragment.clickNote(ListNote[holder.adapterPosition])
+
+        }
+    }
+
+
+    override fun onViewDetachedFromWindow(holder: NoteViewHolder) {
+        holder.itemView.setOnClickListener(null)
+    }
 }
-
-

@@ -11,4 +11,9 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    // new one
+    <string name="new_one_title">Michigan State University gunman had two
+        handguns and multiple loaded magazines: report</string>
+
 </resources>
