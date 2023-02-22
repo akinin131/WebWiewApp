@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WebViewApp</string>
+    <string name="app_name">SportsNews</string>
     <string name="title_activity_new_details">NewDetails</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -11,9 +11,82 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="new_one_title">Gisele Bundchen lets loose during carnival in Brazil, flaunts toned abs while Tom Brady vacations with kids</string>
 
-    // new one
-    <string name="new_one_title">Michigan State University gunman had two
-        handguns and multiple loaded magazines: report</string>
+    <string name="new_one_desc">Gisele Bundchen exuded happiness while celebrating Brazil is Carnival Sunday, donning a Brahma Beer shirt she made into a crop top, exposing her rock hard abs.
+The Brazilian supermodel let loose in her homeland, celebrating the festivities with friends, posing on the red carpet, and sipping on a large coconut drink.
 
+Carnival is a multi-day celebration, always beginning the Friday before Ash Wednesday. Bundchen has attended many times over the years.
+
+The 42-year-old is abs were on display as she transformed her regular t-shirt into an off-the shoulder, scoop-neck crop-top. She paired the look with white pants and a thin black belt.
+        The look is very reminiscent of Bundchen s outfit from Carnival in 2004, when she styled a red Brahma Beer shirt identically with white pants and a thin red belt
+
+    </string>
+
+    <string name="new_two_title">Ex-NFL player Greg Hardy knocked out cold in bare knuckle fight debut</string>
+    <string name="new_two_desc">Former NFL defensive end Greg Hardy has taken up a new career as a pro fighter, but his bare-knuckle boxing debut did not go well.
+
+Hardy suffered a devastating knockout during a bout against Josh Watson in the Knucklemania 3 card on Friday in the second round.
+
+With less than two minutes remaining in the round, the former Dallas Cowboys player failed to land a left-handed swing and in return, Watson hit Hardy with a powerful left hook. Watson hit Hardy again as he was falling to the ground.
+
+The 34-year-old was still attempting to get up when the referee counted to 10. He ultimately needed assistance to sit up, as he was unable to do so under his own power.
+
+The Carolina Panthers selected Hardy in the sixth round of 2010 draft. He went on to become a Pro Bowler in 2013. The following season, he was placed on the commissioner is exempt list due to a domestic violence charge.
+
+    </string>
+    <string name="new_three_title">LSUs Olivia Dunne shuts down fan after weird comment: I am not your mommmy</string>
+    <string name="new_three_desc">LSU gymnast Olivia Dunne has had to go to battle on all fronts this year as she’s had to recover from a leg injury while fending off overzealous fans making strange comments on her TikTok.
+
+The latter happened this past week as Dunne needed to throw some cold water on a thirsty fan who replied to one of her videos with the comment, "Mommy," which was accompanied by a heart emoji. "No, I am not going to crush your skull with my thighs. Also, I am not your mommy," Dunne replied before deleting the response video altogether.
+
+Dunne, the all-around gymnast from New Jersey, has garnered more than 7.1 million followers on TikTok and is among the top athletes who have the most lucrative name, image and likeness deals. She is had to deal with crazed fans all season long, even with some getting razzed up at one of her meets. LSU added extra security once reports of incidents surfaced after one of the Tigers matches. Dunne also had to ward off critics of her social media postings.
+
+"There are some people, occasionally, that do reach and it is a bit concerning," she said on the "Today" show in January. "As a woman, you are not responsible for how a man looks at you and objectifies you. That is not a womans responsibility."
+
+
+Dunne did not compete in Friday match against No. 2 Florida. The No. 8 Tigers scored 198.100 points in the win, their highest score of the season.</string>
+
+
+    <string name="new_four_title">Ex-Bills punter Matt Araiza not playing football in Mexico despite teams announcement, hoping for NFL return</string>
+    <string name="new_four_desc">Former Buffalo Bills punter Matt Araiza, who was released from the team in August after being accused of sexually assaulting a 17-year-old girl while playing football at SDSU, has not signed with a professional football team in Mexico despite an announcement from the team last week, his agent confirmed Monday.
+
+Araiza, who is not facing criminal charges in the case, is still looking for an opportunity to return to the NFL and has not signed with a Liga de Fútbol Americano Profesional (LFA) team, his agent Joe Linta told ESPNs Adam Schefter on Monday.
+
+</string>
+
+    <string name="new_five_title">NBA All-Star Game is the worst basketball game ever played, Nuggets coach says</string>
+    <string name="new_five_desc">The NBA All-Star Game did not appear to sit well with Denver Nuggets coach Michael Malone as Team Giannis topped Team LeBron 189-173 on Sunday night.
+
+Malone fired off a brutally honest take on the game. "It is an honor to be here. It is an honor to be a part of a great weekend with great players. But that is the worst basketball game ever played," Malone said, via Altitude TV.
+
+He gave Philadelphia 76ers star Joel Embiid and Dallas Mavericks guard Kyrie Irving credit for competing.
+
+"Joel was imploring some of the guys to play harder, to try and get some defense in. But no one got hurt, they put on a show for the fans, but that is a tough game to sit through, I am not going to lie," he added.
+
+    The exhibition game did not see much of Milwaukee Bucks star Giannis Antetokounmpo, who was the captain of the team. LeBron James played for a bit and put down a thunderous dunk, but he hurt his hand was forced to leave the game.
+        Jayson Tatum won the All-Star Game MVP for his 55-point performance. Team Giannis shot 61.8% from the field and Team LeBron was 59.8%.
+    </string>
+
+    <string name="new_six_title">Jonathan Toews, who helped Blackhawks to 3 Stanley Cup titles, steps away to deal with serious health issues</string>
+    <string name="new_six_desc">Jonathan Toews helped bring three Stanley Cup championships to the Chicago Blackhawks in the 2010s, fully cementing his legacy as one of the best players to ever play for the franchise.
+
+However, Toews announced Sunday that he will be taking a step back from the ice as he tries to get healthy and recover from long COVID and chronic immune response syndrome.
+"First of all, thank you to the fans and all those who have shown concern about my absence. I am still dealing with the symptoms of Long COVID and Chronic Immune Response Syndrome," he said in a statement through the Blackhawks.
+
+"It has been really challenging to play through these symptoms. In the last few weeks, it has reached the point where I had no choice but to step back and concentrate on getting healthy. I am thankful for the patience and support of my teammates, the coaching staff, and the entire Blackhawks organization."
+        Toews, 34, has played in 46 games this season. He has 14 goals and 14 assists but has not scored more than 20 goals since the 2018-2019 season.
+
+Chicago is 17-32-5 this season, eighth in the NHL Central Division.
+        Chicago has not made the playoffs since the coronavirus-impacted season of 2020 and 2017 before that.
+    </string>
+
+    <string name="new_seven_title">Georgia Bulldogs player sounds off after White House does not invite national champs for second straight year</string>
+    <string name="new_seven_desc">Kirby Smart has built a dynasty in Athens, Georgia. The Bulldogs football team has won back-to-back national championships and is poised to be one of the top teams in the nation again when the 2023 season kicks off.
+
+Once a team hoists the College Football Playoff National Championship trophy, usually the White House will invite said team to Washington to commemorate the achievement.
+
+But for the past two seasons, while the Dawgs have had parades in Athens, they have not received an invitation to make the trip to the nation is capital.
+    Champions at the collegiate level are not the only ones who are usually invited to Washington, D.C. All major sports teams who win their respective championships have traditionally received a White House invitation
+    </string>
 </resources>

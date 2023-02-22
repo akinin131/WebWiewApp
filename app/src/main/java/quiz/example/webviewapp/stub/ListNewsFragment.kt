@@ -55,11 +55,15 @@ class ListNewsFragment : Fragment() {
         adapter = NoteAdapter()
         recyclerView.adapter = adapter
 
-        val newsItem = NewsItem("Michigan State University gunman had two...", R.drawable.newsone,"Michigan State University gunman Anthony McRae had two handguns and multiple loaded...")
-
-        adapter.setList(listOf(newsItem))
-
+        val newsItem = NewsItem("Gisele Bündchen lets loose during Carnival in...", R.drawable.fon2,"Gisele Bündchen exuded happiness while celebrating Brazil's Carnival...")
+        val newsItem1 = NewsItem("Ex-NFL player Greg Hardy knocked out cold in...", R.drawable.fon3,"Former NFL defensive end Greg Hardy has taken up a new...")
+        val newsItem2 = NewsItem("LSU's Olivia Dunne shuts down fan after weird...", R.drawable.fon4,"LSU gymnast Olivia Dunne has had to go to battle on all fronts this...")
+        val newsItem3 = NewsItem("Ex-Bills punter Matt Araiza not playing...", R.drawable.fon5,"Former Buffalo Bills punter Matt Araiza, who was released from the team...")
+        val newsItem4 = NewsItem("NBA All-Star Game 'is the worst basketball...", R.drawable.fon6,"The NBA All-Star Game did not appear to sit well with Denver Nuggets...")
+        val newsItem5 = NewsItem("Jonathan Toews, who helped Blackhawks to 3...", R.drawable.fon7,"Jonathan Toews helped bring three Stanley Cup championships to the Chicago...")
+        val newsItem6 = NewsItem("Georgia Bulldogs player sounds off after White...", R.drawable.fon8,"Kirby Smart has built a dynasty in Athens, Georgia...")
+        val newsItems = listOf(newsItem, newsItem1,newsItem2,newsItem3 ,newsItem4, newsItem5,newsItem6)
+        adapter.setList(newsItems)
+            //adapter.setList(listOf(newsItem1))
     }
-
-
 }

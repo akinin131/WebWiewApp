@@ -20,15 +20,38 @@
         android:theme="@style/Theme.WebViewApp"
         tools:targetApi="31">
         <activity
-            android:name=".Detail"
-            android:exported="false">
+            android:name=".NotInternet"
+            android:exported="false"
+            android:configChanges="orientation|screenSize"
+            >
+
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
             android:name=".stub.News"
-            android:exported="true">
+            android:exported="false"
+            android:configChanges="orientation|screenSize"
+            >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".activity_error"
+            android:exported="false"
+            android:configChanges="orientation|screenSize"
+            >
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize"
+            android:usesCleartextTraffic="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -38,21 +61,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".activity_error"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:usesCleartextTraffic="true">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
         </activity>
     </application>
 
