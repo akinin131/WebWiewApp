@@ -1,4 +1,4 @@
-package quiz.example.webviewapp
+package fav.bet.favbet.app.sport
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -16,8 +16,10 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
+import quiz.example.webviewapp.NotInternet
+import quiz.example.webviewapp.R
 import quiz.example.webviewapp.stub.News
-import java.io.IOException
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -67,8 +69,7 @@ class MainActivity : AppCompatActivity() {
 
             if (link != null) {
                 webView.loadUrl(link)
-            } else {
-                // Получение экземпляра FirebaseRemoteConfig для доступа к параметрам удаленной конфигурации.
+                 //Получение экземпляра FirebaseRemoteConfig для доступа к параметрам удаленной конфигурации.
                 firebaseRemoteConfig = FirebaseRemoteConfig.getInstance()
                 try {
                     // Извлекает и активирует конфигурацию из Firebase Remote Config
@@ -76,7 +77,7 @@ class MainActivity : AppCompatActivity() {
                         // Проверка, была ли задача выполнена успешно
                         if (task.isSuccessful) {
                             // Получить URL-адрес из удаленной конфигурации
-                            val url = firebaseRemoteConfig.getString("myLink")
+                            val url = firebaseRemoteConfig.getString("a83456ff-b1ef-4815-9b0a-499086fc1450")
                             // Проверка, не является ли URL пустым
                             if (url.isNotEmpty()) {
                                 // Загрузка URL-адрес в WebView
@@ -106,6 +107,8 @@ class MainActivity : AppCompatActivity() {
                     val errorTextView = findViewById<TextView>(R.id.errorTextView)
                     errorTextView.text = e.toString()
                 }
+            } else {
+
             }
 
 
@@ -141,7 +144,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
+ /*   override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         webView.saveState(outState)
     }
@@ -149,7 +152,7 @@ class MainActivity : AppCompatActivity() {
     override fun onRestoreInstanceState(savedInstanceState: Bundle) {
         super.onRestoreInstanceState(savedInstanceState)
         webView.restoreState(savedInstanceState)
-    }
+    }*/
     fun isOnline(): Boolean {
         val cm = getSystemService(CONNECTIVITY_SERVICE) as ConnectivityManager
         val activeNetwork = cm.activeNetworkInfo

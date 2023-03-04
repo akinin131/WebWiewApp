@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "391939836843",
+    "project_id": "rfadia-f2b5a",
+    "storage_bucket": "rfadia-f2b5a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:391939836843:android:85d46b5c53b3bcfb30e0ee",
+        "android_client_info": {
+          "package_name": "fav.bet.favbet.app.sport"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "391939836843-qej0klfo9h6rrsh9k18sj82sa8ovvgo2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC_tWKh3xxtr5NJJJiN15GKcMKrh3-cnyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "391939836843-qej0klfo9h6rrsh9k18sj82sa8ovvgo2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
